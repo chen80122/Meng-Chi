@@ -5,18 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meng-Chi | Snowboard Instructor & Traveler</title>
   <link rel="stylesheet" href="style.css" />
- <link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-sA+e2Zb65JbGzGZz5xJz0vZJkzU+1wzj+U+1wzj+U+1wzj+U+1wzj+U+1wzj+U="
-  crossorigin=""
-/>
-<style>
-  #map {
-    height: 500px;
-    width: 100%;
-  }
-</style>
 </head>
 <body>
 
@@ -66,15 +54,12 @@
     <p>Through all these travels, I’ve learned that snowboarding and adventure both bring people together — across places, cultures, and languages.</p>
   </section>
 
-  <section id="travel-map">
-    <h2>My Travel Map</h2>
-    <div id="map"></div>
-  </section>
-
   <section id="certifications">
     <h2>Certifications</h2>
     <ul>
       <li>CASI Level 1 Snowboard Instructor</li>
+      <li>First Aid Certified</li>
+      <li>Avalanche Safety Training (AST 1)</li>
     </ul>
   </section>
 
@@ -88,54 +73,5 @@
     <p>© 2025 Meng-Chi — Built with ❤️ on GitHub Pages</p>
   </footer>
 
-  <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-o9N1j6rPzj2/bVL7vx1kGxCkRSlgYh8uA7nU2dFj4XY="
-    crossorigin=""
-  ></script>
-
-  <!-- Map Initialization -->
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var map = L.map('map').setView([20, 0], 2);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    const places = [
-      { name: "Calgary, Canada", coords: [51.0447, -114.0719] },
-      { name: "Kyoto, Japan", coords: [35.0116, 135.7681] },
-      { name: "Osaka, Japan", coords: [34.6937, 135.5023] },
-      { name: "Seoul, South Korea", coords: [37.5665, 126.9780] },
-      { name: "Busan, South Korea", coords: [35.1796, 129.0756] },
-      { name: "Bangkok, Thailand", coords: [13.7563, 100.5018] },
-      { name: "Ho Chi Minh City, Vietnam", coords: [10.8231, 106.6297] },
-      { name: "Cebu, Philippines", coords: [10.3157, 123.8854] },
-      { name: "London, England", coords: [51.5074, -0.1278] },
-      { name: "Oxford, England", coords: [51.7520, -1.2577] },
-      { name: "New York, USA", coords: [40.7128, -74.0060] },
-      { name: "Los Angeles, USA", coords: [34.0522, -118.2437] },
-      { name: "Las Vegas, USA", coords: [36.1699, -115.1398] },
-      { name: "Chicago, USA", coords: [41.8781, -87.6298] },
-      { name: "Grand Canyon, USA", coords: [36.1069, -112.1129] },
-      { name: "Hawaii, USA", coords: [21.3069, -157.8583] },
-      { name: "Paris, France", coords: [48.8566, 2.3522] },
-      { name: "Brussels, Belgium", coords: [50.8503, 4.3517] },
-      { name: "Berlin, Germany", coords: [52.5200, 13.4050] },
-      { name: "Hong Kong", coords: [22.3193, 114.1694] },
-      { name: "Macau", coords: [22.1987, 113.5439] },
-      { name: "Singapore", coords: [1.3521, 103.8198] },
-      { name: "Reykjavík, Iceland", coords: [64.1355, -21.8954] },
-      { name: "Sydney, Australia", coords: [-33.8688, 151.2093] },
-      { name: "Auckland, New Zealand", coords: [-36.8485, 174.7633] }
-    ];
-
-    places.forEach(place => {
-      L.marker(place.coords).addTo(map)
-        .bindPopup(`<b>${place.name}</b>`);
-    });
-  });
-</script>
 </body>
+</html>
