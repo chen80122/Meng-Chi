@@ -1,39 +1,138 @@
+/* ------------------------------------- */
+/* 1. 全域重設與雪地主題背景 */
+/* ------------------------------------- */
+
+/* 使用柔和的淺藍色背景，模擬冬日雪地 */
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  color: #333;
-  background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F0F8FF; /* Alice Blue - 非常淺的藍色，接近雪白 */
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-header, footer {
-  text-align: center;
-  background: #004c7d;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
+/* 確保地圖的高度 */
+#map {
+    height: 500px;
+    width: 100%;
+    border-radius: 10px; /* 圓角地圖 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 柔和陰影 */
 }
 
+/* ------------------------------------- */
+/* 2. 佈局與區塊樣式 */
+/* ------------------------------------- */
+
+/* 頁面主要容器 */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 區塊樣式：白色背景、圓角和柔和陰影，模擬雪堆或冰面 */
 section {
-  background: white;
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #FFFFFF;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 15px; /* 明顯的圓角 */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* 更柔和、範圍更廣的陰影 */
+    border: 1px solid #E0FFFF; /* 淺青色邊框增加清冷感 */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+section:hover {
+    transform: translateY(-3px); /* 輕微上浮效果 */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ------------------------------------- */
+/* 3. 標題與字體 */
+/* ------------------------------------- */
+
+/* 頂部標頭：使用深一點的藍色，模擬冬日天空 */
+header {
+    background-color: #87CEEB; /* Sky Blue - 低飽和的藍色 */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* 區塊標題：使用低飽和度的深藍色 */
 h2 {
-  color: #004c7d;
-  border-bottom: 2px solid #004c7d;
-  padding-bottom: 5px;
+    color: #4682B4; /* Steel Blue - 低飽和的主色調 */
+    border-bottom: 2px solid #ADD8E6; /* Light Blue 下劃線 */
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
+/* ------------------------------------- */
+/* 4. 列表與連結 */
+/* ------------------------------------- */
+
+/* 列表樣式：增加間距，使其更清晰 */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #E0F7FA; /* 淺色虛線分隔 */
+}
+
+/* 連結樣式：低飽和的優雅藍紫色 */
 a {
-  color: #004c7d;
-  text-decoration: none;
+    color: #6A5ACD; /* Slate Blue - 偏紫的藍色 */
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 a:hover {
-  text-decoration: underline;
+    color: #483D8B; /* Dark Slate Blue - 加深 hover 效果 */
+    text-decoration: underline;
+}
+
+/* ------------------------------------- */
+/* 5. 頁腳 */
+/* ------------------------------------- */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #6495ED; /* Cornflower Blue - 柔和的藍色 */
+}
+
+/* ------------------------------------- */
+/* 6. 響應式設計 (Responsive Design) */
+/* ------------------------------------- */
+
+@media (max-width: 768px) {
+    section {
+        margin: 15px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+}
